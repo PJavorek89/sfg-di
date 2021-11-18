@@ -7,7 +7,7 @@ import guru.springframework.sfgdi.services.*;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.*;
 
-@PropertySource("classpath:datasource.properties ")  //we are telling spring that we added file with the resources (its on the class ),
+// - dont need this becouse of the properties are in app.properties @PropertySource("classpath:datasource.properties ")  //we are telling spring that we added file with the resources (its on the class ),
 // all resources in the folder will be added to the jar and avaliable
 @ImportResource("classpath:sfgdi-config.xml")
 @Configuration
