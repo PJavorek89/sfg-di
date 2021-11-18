@@ -1,7 +1,17 @@
 spring:
   profiles:
-    active: dog,EN,qa
+    active: #dog,EN,prod - it could be comma separated or in list form
+      - dog
+      - EN
+      - prod
 guru:
   username: YmlUserName
   password: YmlPassword
   jdbcurl: YmlUrl
+---  #will start another stream (and end previous) of yml data, in this case it was like new config file, names prod(profiles: name)
+spring:
+  profiles: prod
+guru:
+  username: YmlProdUserName
+  password: YmlProdPassword
+  jdbcurl: YmlProdUrl
